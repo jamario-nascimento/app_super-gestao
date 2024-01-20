@@ -54,6 +54,8 @@ Route::get('/rota2', function (){
     return redirect()->route('site.rota1');
 })->name('site.rota2');
 
+// Passando parametros para controller
+Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('teste');
 //Route::redirect('/rota2','/rota1');
 
 // A Rota fallback usada para customizar a rota de erro padrão do laravel
