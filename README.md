@@ -38,3 +38,6 @@ Sistema de gestão...
 - ```php artisan serve``` **Sobe a aplição em um servidor próprio, usado para dev**
 - ```php artisan list``` **Mostra a lista de comandos do artesão**
 - ```php artisan route:list``` **Mostra a lista de rottas da aplicação**
+- ```php artisan make:model NomeDoModelo -m``` **Cria modelos o parametro -m é para criar uma migration junto com o Model**
+- ```php artisan migrate``` **Executa as migrações**
+- ```php artisan make:migration create_fornecedores_table``` **Comando para criar migrations separadas**
