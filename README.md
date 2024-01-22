@@ -41,3 +41,5 @@ Sistema de gestão...
 - ```php artisan make:model NomeDoModelo -m``` **Cria modelos o parametro -m é para criar uma migration junto com o Model**
 - ```php artisan migrate``` **Executa as migrações**
 - ```php artisan make:migration create_fornecedores_table``` **Comando para criar migrations separadas**
+- ```php artisan make:migration alter_fornecedors_new_colluns``` **Comando para criar migrations para atualizar minha tabela**
+- ```php artisan migrate:rollback ``` **Comando para reverter uma migration na ultima migration executada** ( parametro define a quantidade de etapas quero reverter "--step=2")
