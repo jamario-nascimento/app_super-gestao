@@ -43,3 +43,7 @@ Sistema de gestão...
 - ```php artisan make:migration create_fornecedores_table``` **Comando para criar migrations separadas**
 - ```php artisan make:migration alter_fornecedors_new_colluns``` **Comando para criar migrations para atualizar minha tabela**
 - ```php artisan migrate:rollback ``` **Comando para reverter uma migration na ultima migration executada** ( parametro define a quantidade de etapas quero reverter "--step=2")
+- ```php artisan migrate:status ``` **Comando que lista situação das migrações**
+- ```php artisan migrate:reset ``` **Comando executa todos os rollbacks do laravel**
+- ```php artisan migrate:refresh ``` **Comando executa todos os rollbacks do laravel e depois recria tudo novamente**
+- ```php artisan migrate:fresh ``` **Comando executa todos os dropa o laravel e depois recria tudo novamente**
