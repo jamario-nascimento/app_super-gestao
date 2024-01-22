@@ -3,7 +3,6 @@
 @section('titulo', 'início')
 
 @section('conteudo')
-    @include('site.layout._partials.topo')
 
         <div class="conteudo-destaque">
 

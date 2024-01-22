@@ -3,7 +3,6 @@
 @section('titulo', $titulo)
 
 @section('conteudo')
-    @include('site.layout._partials.topo')
 
         <div class="conteudo-pagina">
             <div class="titulo-pagina">
