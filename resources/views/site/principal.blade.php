@@ -1,4 +1,7 @@
 @extends('site/layout/basico')
+
+@section('titulo', 'início')
+
 @section('conteudo')
         <div class="topo">
 
