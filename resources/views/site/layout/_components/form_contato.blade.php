@@ -17,4 +17,8 @@
 <textarea name="mensagem" class="{{ $classe }}">Preencha aqui a sua mensagem</textarea>
 <br>
 <button type="submit" class="{{ $classe }}">ENVIAR</button>
-</form><?php
+</form>
+
+<pre>
+    {{ print_r($errors)}}
+</pre>
