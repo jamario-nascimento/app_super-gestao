@@ -111,3 +111,9 @@ apresentar aquela tupla
 
 ```$fornecedor  = Fornecedor::withTrashed()->get();```
 ```$fornecedor[0]->restore();```
+
+## Middlewares
+
+### Criando novo middleware
+
+```php artisan make:middleware NomeMiddleware```
