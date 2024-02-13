@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterFornecedorsNovaColunaSiteAffter extends Migration
+class CreateFornecedoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AlterFornecedorsNovaColunaSiteAffter extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('fornecedors', function (Blueprint $table){
-           $table->string('site', 70)->after('nome')->nullable();
+        Schema::create('fornecedores', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome', 50);
+            $table->timestamps();
+            //$table->softDeletes();
         });
     }
 
@@ -26,8 +28,7 @@ class AlterFornecedorsNovaColunaSiteAffter extends Migration
      */
     public function down()
     {
-        Schema::table('fornecedors', function (Blueprint $table){
-            $table->dropColumn('site');
-        });
+        Schema::dropIfExists('fornecedores');
+        // Schema::drop('fornecedores');
     }
 }

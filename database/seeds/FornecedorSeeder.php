@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Fornecedor;
-use Illuminate\Support\Facades\DB;
 
 class FornecedorSeeder extends Seeder
 {
@@ -13,28 +12,28 @@ class FornecedorSeeder extends Seeder
      */
     public function run()
     {
-        // instanciando objeto e criando
+        //instanciando o objeto
         $fornecedor = new Fornecedor();
-        $fornecedor->nome = 'Jamario Nascimento';
-        $fornecedor->site = 'jamario.com.br';
-        $fornecedor->uf = 'BA';
-        $fornecedor->email = 'jamariobatista@gmail.com';
-        $fornecedor->save;
+        $fornecedor->nome = 'Fornecedor 100';
+        $fornecedor->site = 'fornecedor100.com.br';
+        $fornecedor->uf = 'CE';
+        $fornecedor->email = 'contato@fornecedor100.com.br';
+        $fornecedor->save();
 
-        // usando metodo create ( é preciso ter o private fillable na classe )
+        //o método create (atenção para o atributo fillable da classe)
         Fornecedor::create([
-            'nome'  => 'Ludmila Rodriques',
-            'site'  => 'ludmila.com.br',
-            'uf'    => 'GO',
-            'email' => 'ludmilarodriques@gmail.com',
-            ]);
+            'nome' => 'Fornecedor 200',
+            'site' => 'fornecedor200.com.br',
+            'uf' => 'RS',
+            'email' => 'contato@fornecedor200.com.br'
+        ]);
 
-        // Metodo insert
-//        DB::table('fornecedors')->insert([
-//            'nome'  => 'Leonardo Nunes',
-//            'site'  => 'leozinhosodelas.com.br',
-//            'uf'    => 'SP',
-//            'email' => 'leozinhosodelas@gmail.com',
-//        ]);
+        //insert
+        DB::table('fornecedores')->insert([
+            'nome' => 'Fornecedor 300',
+            'site' => 'fornecedor300.com.br',
+            'uf' => 'SP',
+            'email' => 'contato@fornecedor300.com.br'
+        ]);
     }
 }
