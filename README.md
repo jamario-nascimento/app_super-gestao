@@ -117,3 +117,5 @@ apresentar aquela tupla
 ### Criando novo middleware
 
 ```php artisan make:middleware NomeMiddleware```
+
+## 
