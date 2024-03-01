@@ -195,3 +195,26 @@ button:hover {
 .redes-sociais img {
     margin: 0px 15px 0px 15px;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr th{
+    border: 2px solid #f8f8f8;
+    background-color: #2a9ee2;
+    color: #000;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    table-layout: fixed;
+    font-weight: bold;
+}
+table tr td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    table-layout: fixed;
+}
