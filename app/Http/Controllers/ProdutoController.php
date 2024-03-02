@@ -94,7 +94,27 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, Produto $produto)
     {
-        //
+        $regras = [
+            'nome' => 'required|min:3|max:255',
+            'descricao' => 'required|min:3|max:1000',
+            'peso' => 'required|integer',
+            'unidade_id' => 'exists:unidades,id'
+        ];
+
+        $feedback = [
+            'required' => 'O campo :attribute deve ser preenchido',
+            'nome.min' => 'O campo nome deve ter no mínimo 3 caracteres',
+            'nome.max' => 'O campo nome deve ter no máximo 255 caracteres',
+            'descricao.min' => 'O campo descrição deve ter no mínimo 3 caracteres',
+            'descricao.max' => 'O campo descrição deve ter no máximo 1000 caracteres',
+            'peso.integer' => 'O campo peso deve ser um valor inteiro',
+            'unidade_id.exists' => 'A unidade informada não existe'
+        ];
+
+        $request->validate($regras, $feedback);
+        
+        $produto->update($request->all());
+        return redirect()->route('produto.index');
     }
 
     /**
