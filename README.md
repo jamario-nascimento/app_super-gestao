@@ -118,4 +118,6 @@ apresentar aquela tupla
 
 ```php artisan make:middleware NomeMiddleware```
 
-## 
+## Criando Controller com canvenção resources
+
+```php artisan make:controller --resource ProdutoController --model Produto```
