@@ -112,7 +112,7 @@ class ProdutoController extends Controller
         ];
 
         $request->validate($regras, $feedback);
-        
+
         $produto->update($request->all());
         return redirect()->route('produto.index');
     }
@@ -125,6 +125,7 @@ class ProdutoController extends Controller
      */
     public function destroy(Produto $produto)
     {
-        //
+        $produto->delete();
+        return redirect()->route('produto.index');
     }
 }
