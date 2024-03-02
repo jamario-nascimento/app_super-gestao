@@ -218,3 +218,12 @@ table tr td{
     width: auto;
     table-layout: fixed;
 }
+.pagination li{
+  display: inline;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.pagination ul{
+   list-style-type:none;
+  }
